@@ -1,0 +1,19 @@
+Query_1:
+SELECT product_type, price, customer_demographics, shipping_times, shipping_costs
+FROM products p JOIN sales s ON p.SKU = s.SKU
+JOIN shipping_transportation st ON p.SKU = st.SKU
+
+Query_2:
+SELECT product_type, price, Availability, s.Revenue_generated, order_quantities
+FROM products p JOIN sales s ON p.SKU = s.SKU
+JOIN shipping_transportation st ON p.SKU = st.SKU
+
+Query_3:
+SELECT product_type, customer_demographics, shipping_carriers, transportation_modes
+FROM products p JOIN sales s ON p.SKU = s.SKU
+JOIN shipping_transportation st ON p.SKU = st.SKU
+
+Query_4:
+SELECT customer_demographics, p.Number_of_products_sold, shipping_times, s.Revenue_generated
+FROM products p JOIN sales s ON p.SKU = s.SKU
+JOIN shipping_transportation st ON p.SKU = st.SKU
